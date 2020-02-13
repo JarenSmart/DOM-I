@@ -110,3 +110,17 @@ contactP[2].textContent = siteContent["contact"]["email"];
 //footer
 let footerP = document.querySelector("footer p");
 footerP.textContent = siteContent["footer"]["copyright"];
+
+//TASK 3: Add new content
+let nav = document.querySelector("nav");
+const Devs = document.createElement("a");
+Devs.textContent = "Devs";
+nav.appendChild(Devs);
+Devs.style.color = "green";
+Devs.style.cursor = "pointer";
+
+const Home = document.createElement("a");
+Home.textContent = "Home";
+nav.prepend(Home);
+Home.style.color = "green";
+Home.style.cursor = "pointer";
