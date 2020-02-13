@@ -73,7 +73,8 @@ Array.from(links).forEach(link => {
 
 //cta-section
 let ctaH1 = document.querySelector("h1");
-ctaH1.textContent = siteContent["cta"]["h1"];
+ctaH1.textContent = "DOM \n Is \n Awesome";
+ctaH1.setAttribute("style", "white-space: pre;");
 
 let ctaBtn = document.querySelector("button");
 ctaBtn.textContent = siteContent["cta"]["button"];
@@ -103,7 +104,8 @@ let contactH4 = document.querySelector(".contact h4");
 contactH4.textContent = siteContent["contact"]["contact-h4"];
 
 let contactP = document.querySelectorAll(".contact p");
-contactP[0].textContent = siteContent["contact"]["address"];
+contactP[0].textContent = "123 Way 456 Street \n Somewhere, USA";
+contactP[0].setAttribute("style", "white-space: pre;");
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 
