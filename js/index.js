@@ -53,6 +53,60 @@ let midImg = document.getElementById("middle-img");
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 //nav
-document.getElementsByClassName("nav-item");
+let links = document.querySelectorAll("a");
+links[0].textContent = siteContent["nav"]["nav-item-1"];
+links[1].textContent = siteContent["nav"]["nav-item-2"];
+links[2].textContent = siteContent["nav"]["nav-item-3"];
+links[3].textContent = siteContent["nav"]["nav-item-4"];
+links[4].textContent = siteContent["nav"]["nav-item-5"];
+links[5].textContent = siteContent["nav"]["nav-item-6"];
 
-//cta-text
+Array.from(links).forEach(link => {
+  link.style.color = "green";
+});
+
+//WHY DOESN'T THIS WORK???
+// let links = document.querySelectorAll("nav a");
+// links.forEach((a, index) => {
+//   a.textContent = siteContent(["nav"][`nav-item-${index + 1}`]);
+// });
+
+//cta-section
+let ctaH1 = document.querySelector("h1");
+ctaH1.textContent = siteContent["cta"]["h1"];
+
+let ctaBtn = document.querySelector("button");
+ctaBtn.textContent = siteContent["cta"]["button"];
+
+//main-content & headers
+let mainHeaders = document.querySelectorAll(".top-content h4");
+mainHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+mainHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+
+let mainP = document.querySelectorAll(".top-content p");
+mainP[0].textContent = siteContent["main-content"]["features-content"];
+mainP[1].textContent = siteContent["main-content"]["about-content"];
+
+//bottom-content
+let bottomHeaders = document.querySelectorAll(".bottom-content h4");
+bottomHeaders[0].textContent = siteContent["main-content"]["services-h4"];
+bottomHeaders[1].textContent = siteContent["main-content"]["product-h4"];
+bottomHeaders[2].textContent = siteContent["main-content"]["vision-h4"];
+
+let bottomP = document.querySelectorAll(".bottom-content p");
+bottomP[0].textContent = siteContent["main-content"]["services-content"];
+bottomP[1].textContent = siteContent["main-content"]["product-content"];
+bottomP[2].textContent = siteContent["main-content"]["vision-content"];
+
+//contact
+let contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+//footer
+let footerP = document.querySelector("footer p");
+footerP.textContent = siteContent["footer"]["copyright"];
